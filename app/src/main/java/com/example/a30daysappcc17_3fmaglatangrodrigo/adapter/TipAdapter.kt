@@ -1,4 +1,4 @@
-package com.example.a30daysappcc17_3fmaglatangrodrigo
+package com.example.a30daysappcc17_3fmaglatangrodrigo.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.a30daysappcc17_3fmaglatangrodrigo.R
 
 data class Tip(
     val day: String,

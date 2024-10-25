@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.a30daysappcc17_3fmaglatangrodrigo.adapter.Tip
+import com.example.a30daysappcc17_3fmaglatangrodrigo.adapter.TipAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,12 +20,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         val tips = listOf(
-            Tip("Day 1", R.drawable.sample_image1, "Spend 15 minutes outdoors", "Take a walk or stroll in your neighborhood."),
-            Tip("Day 2", R.drawable.sample_image2, "Listen to a new podcast", "Explore a new topic or genre."),
-            Tip("Day 3", R.drawable.sample_image3, "Try a new hobby", "Pick up a new hobby like painting or knitting."),
-            Tip("Day 4", R.drawable.sample_image4, "Eat a healthy meal", "Cook something nutritious and delicious."),
-            Tip("Day 5", R.drawable.sample_image5, "Do 10 minutes of meditation", "Take time to focus on your breath and relax."),
-            Tip("Day 6", R.drawable.sample_image6, "Call a loved one", "Reach out to someone you haven’t talked to in a while."),
+            Tip("Day 1", R.drawable.outdoor, "Spend 15 minutes outdoors", "Take a walk or stroll in your neighborhood."),
+            Tip("Day 2", R.drawable.podcast, "Listen to a new podcast", "Explore a new topic or genre."),
+            Tip("Day 3", R.drawable.new_hobby, "Try a new hobby", "Pick up a new hobby like painting or knitting."),
+            Tip("Day 4", R.drawable.healthy_meal, "Eat a healthy meal", "Cook something nutritious and delicious."),
+            Tip("Day 5", R.drawable.meditation, "Do 10 minutes of meditation", "Take time to focus on your breath and relax."),
+            Tip("Day 6", R.drawable.loved_one, "Call a loved one", "Reach out to someone you haven’t talked to in a while."),
             Tip("Day 7", R.drawable.sample_image7, "Read a chapter of a book", "Enjoy a chapter from a book you’ve been meaning to read."),
             Tip("Day 8", R.drawable.sample_image8, "Stretch for 5 minutes", "Do simple stretches to relax your muscles."),
             Tip("Day 9", R.drawable.sample_image9, "Take a 20-minute nap", "Recharge by napping during the day."),
