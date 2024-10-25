@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- TextView for displaying the day -->
         <TextView
             android:id="@+id/tip_day"
             android:layout_width="wrap_content"
@@ -20,6 +21,7 @@
             android:textStyle="bold"
             android:textSize="18sp"/>
 
+        <!-- ImageView for displaying the tip image -->
         <ImageView
             android:id="@+id/tip_image"
             android:layout_width="match_parent"
@@ -27,6 +29,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/tips"/>
 
+        <!-- TextView for displaying the tip title -->
         <TextView
             android:id="@+id/tip_title"
             android:layout_width="wrap_content"
@@ -35,6 +38,7 @@
             android:textSize="16sp"
             android:paddingTop="8dp"/>
 
+        <!-- TextView for displaying the tip description -->
         <TextView
             android:id="@+id/tip_description"
             android:layout_width="wrap_content"
