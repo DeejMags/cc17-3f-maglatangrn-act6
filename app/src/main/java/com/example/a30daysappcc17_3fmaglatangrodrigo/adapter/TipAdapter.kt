@@ -7,34 +7,26 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a30daysappcc17_3fmaglatangrodrigo.R
-
-data class Tip(
-    val day: String,
-    val imageResId: Int,
-    val title: String,
-    val description: String
-)
+import com.example.a30daysappcc17_3fmaglatangrodrigo.data.Tip
 
 class TipAdapter(private val tips: List<Tip>) : RecyclerView.Adapter<TipAdapter.TipViewHolder>() {
 
-    inner class TipViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val dayTextView: TextView = itemView.findViewById(R.id.tip_day)
-        val imageView: ImageView = itemView.findViewById(R.id.tip_image)
-        val titleTextView: TextView = itemView.findViewById(R.id.tip_title)
-        val descriptionTextView: TextView = itemView.findViewById(R.id.tip_description)
+    class TipViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val tipImage: ImageView = itemView.findViewById(R.id.tip_image)
+        val tipTitle: TextView = itemView.findViewById(R.id.tip_title)
+        val tipShortDescription: TextView = itemView.findViewById(R.id.tip_description)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TipViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_tip, parent, false)
-        return TipViewHolder(itemView)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false)
+        return TipViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TipViewHolder, position: Int) {
-        val currentTip = tips[position]
-        holder.dayTextView.text = currentTip.day
-        holder.imageView.setImageResource(currentTip.imageResId)
-        holder.titleTextView.text = currentTip.title
-        holder.descriptionTextView.text = currentTip.description
+        val tip = tips[position]
+        holder.tipImage.setImageResource(tip.imageResId)
+        holder.tipTitle.text = tip.title
+        holder.tipShortDescription.text = tip.description
     }
 
     override fun getItemCount() = tips.size
